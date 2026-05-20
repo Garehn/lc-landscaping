@@ -1,0 +1,209 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Design engineering easing curves */
+    --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+    --ease-in-out: cubic-bezier(0.77, 0, 0.175, 1);
+    --ease-spring: cubic-bezier(0.32, 0.72, 0, 1);
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-ivory text-charcoal font-sans antialiased;
+    letter-spacing: -0.01em;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  ::selection {
+    background: #1A1D1F;
+    color: #F6F4EF;
+  }
+
+  h1, h2, h3, h4 {
+    @apply font-serif;
+    letter-spacing: -0.025em;
+    line-height: 1.06;
+  }
+
+  h1, h2 { font-weight: 600; }
+
+  a { @apply transition-colors duration-300; }
+
+  /* Reduced motion — keep opacity, strip transforms */
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+}
+
+@layer components {
+  .container-x {
+    @apply mx-auto w-full max-w-container px-6 sm:px-8 lg:px-16;
+  }
+
+  .display {
+    font-family: var(--font-playfair), Georgia, serif;
+    font-weight: 600;
+    font-size: clamp(2.75rem, 7vw, 6rem);
+    line-height: 1.02;
+    letter-spacing: -0.03em;
+  }
+  .display-italic {
+    font-style: italic;
+    font-weight: 500;
+  }
+  .display-sm {
+    font-family: var(--font-playfair), Georgia, serif;
+    font-weight: 600;
+    font-size: clamp(2rem, 4.5vw, 3.75rem);
+    line-height: 1.08;
+    letter-spacing: -0.028em;
+  }
+
+  .eyebrow {
+    @apply text-[11px] uppercase tracking-[0.25em] text-stone font-medium;
+  }
+
+  .body-lg {
+    @apply text-lg sm:text-xl leading-relaxed text-charcoal/80;
+  }
+
+  /* Buttons with tactile active press state */
+  .btn {
+    @apply inline-flex items-center justify-center gap-2.5 px-8 py-4 text-[13px] uppercase tracking-[0.2em] font-medium;
+    transition: transform 160ms var(--ease-out), background-color 400ms var(--ease-out), color 400ms var(--ease-out), border-color 400ms var(--ease-out);
+  }
+  .btn:active {
+    transform: scale(0.97);
+  }
+
+  .btn-primary {
+    @apply btn bg-charcoal text-ivory;
+  }
+  .btn-primary:hover {
+    @apply bg-copper;
+  }
+
+  .btn-copper {
+    @apply btn bg-copper text-ivory;
+  }
+  .btn-copper:hover {
+    @apply bg-charcoal;
+  }
+
+  .btn-ghost {
+    @apply btn border border-charcoal/20 text-charcoal;
+  }
+  .btn-ghost:hover {
+    @apply border-charcoal bg-charcoal text-ivory;
+  }
+
+  .btn-light {
+    @apply btn border border-ivory/30 text-ivory;
+  }
+  .btn-light:hover {
+    @apply bg-ivory text-charcoal;
+  }
+
+  .link-underline {
+    @apply relative inline-block;
+    background-image: linear-gradient(currentColor, currentColor);
+    background-size: 100% 1px;
+    background-position: 0 100%;
+    background-repeat: no-repeat;
+    transition: background-size 400ms var(--ease-out);
+  }
+  .link-underline:hover {
+    background-size: 0 1px;
+    background-position: 100% 100%;
+  }
+
+  .rule {
+    @apply h-px w-full bg-mist;
+  }
+
+  /* Stagger animation — children fade+slide in with delay */
+  .stagger-children > * {
+    opacity: 0;
+    transform: translateY(8px);
+    animation: staggerFadeIn 600ms var(--ease-out) forwards;
+  }
+  .stagger-children > *:nth-child(1) { animation-delay: 0ms; }
+  .stagger-children > *:nth-child(2) { animation-delay: 70ms; }
+  .stagger-children > *:nth-child(3) { animation-delay: 140ms; }
+  .stagger-children > *:nth-child(4) { animation-delay: 210ms; }
+  .stagger-children > *:nth-child(5) { animation-delay: 280ms; }
+  .stagger-children > *:nth-child(6) { animation-delay: 350ms; }
+
+  @keyframes staggerFadeIn {
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  /* Clip-path image reveal */
+  .clip-reveal {
+    clip-path: inset(0 0 100% 0);
+    transition: clip-path 1.2s var(--ease-in-out);
+  }
+  .clip-reveal.revealed {
+    clip-path: inset(0 0 0 0);
+  }
+
+  /* Grain texture overlay for sections */
+  .grain {
+    position: relative;
+  }
+  .grain::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    opacity: 0.035;
+    pointer-events: none;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+    background-size: 256px;
+  }
+}
+
+@layer utilities {
+  .text-balance { text-wrap: balance; }
+  .text-pretty { text-wrap: pretty; }
+
+  /* Smooth scroll indicator pulse */
+  @keyframes scrollPulse {
+    0%, 100% { opacity: 0.3; transform: translateY(0); }
+    50% { opacity: 0.7; transform: translateY(6px); }
+  }
+  .scroll-pulse {
+    animation: scrollPulse 2.5s var(--ease-in-out) infinite;
+  }
+
+  /* Horizontal line grow animation */
+  @keyframes lineGrow {
+    from { transform: scaleX(0); }
+    to { transform: scaleX(1); }
+  }
+  .line-grow {
+    transform-origin: left;
+    animation: lineGrow 1.2s var(--ease-out) forwards;
+  }
+
+  /* Image shimmer loading state */
+  @keyframes shimmer {
+    0% { background-position: -200% 0; }
+    100% { background-position: 200% 0; }
+  }
+  .img-shimmer {
+    background: linear-gradient(90deg, theme('colors.dune') 25%, theme('colors.mist') 50%, theme('colors.dune') 75%);
+    background-size: 200% 100%;
+    animation: shimmer 2s ease-in-out infinite;
+  }
+}
