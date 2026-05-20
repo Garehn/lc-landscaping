@@ -1,3 +1,8 @@
+export interface BlogImage {
+  src: string;
+  alt: string;
+}
+
 export interface BlogPost {
   slug: string;
   title: string;
@@ -5,6 +10,9 @@ export interface BlogPost {
   date: string;
   readTime: string;
   keyword: string;
+  heroImage: BlogImage;
+  pullQuote: string;
+  inlineImages: BlogImage[];
   content: string;
 }
 
@@ -16,6 +24,12 @@ export const blogPosts: BlogPost[] = [
     date: '2025-05-15',
     readTime: '7 min read',
     keyword: 'frost tolerant gardens canberra',
+    heroImage: { src: '/images/service_outdoor.jpg', alt: 'Native planting and mulch in a frost-tolerant Canberra garden bed' },
+    pullQuote: 'A frost-tolerant garden in Canberra does not have to look boring. It just requires choosing the right plants for the conditions.',
+    inlineImages: [
+      { src: '/images/service_planting.jpg', alt: 'Native plants with fresh mulch in a Canberra garden bed' },
+      { src: '/images/service_maintain.jpg', alt: 'A well-maintained Canberra garden with clipped hedges and edged lawn' },
+    ],
     content: `
 ## Canberra winters do not forgive bad plant choices
 
@@ -61,6 +75,12 @@ If your garden took a hit last winter and you want to replant with species that 
     date: '2025-05-08',
     readTime: '6 min read',
     keyword: 'hedge trimming canberra',
+    heroImage: { src: '/images/service_hardscape.jpg', alt: 'Precision hedge trimming along a Canberra property fence line' },
+    pullQuote: 'A good hedge is wider at the bottom than the top. This lets light reach the lower branches.',
+    inlineImages: [
+      { src: '/images/slider_2.jpg', alt: 'A neatly trimmed photinia hedge along a Canberra fence line' },
+      { src: '/images/service_hedge.jpg', alt: 'Hedge trimming in progress with commercial-grade trimmers' },
+    ],
     content: `
 ## Hedges are the backbone of a Canberra garden
 
@@ -116,6 +136,12 @@ We quote hedge trimming as part of our regular maintenance packages or as a one-
     date: '2025-04-28',
     readTime: '8 min read',
     keyword: 'backyard makeover ideas canberra',
+    heroImage: { src: '/images/portfolio_1.jpg', alt: 'A Belconnen garden makeover with new garden beds and native planting' },
+    pullQuote: 'The projects that work best are the ones planned around how people actually live.',
+    inlineImages: [
+      { src: '/images/service_design.jpg', alt: 'A neatly mowed lawn with sharp edges and a trimmed hedge border' },
+      { src: '/images/ba1_after.jpg', alt: 'A backyard after makeover with new garden beds, mulch and tidy lawn' },
+    ],
     content: `
 ## Your backyard should work as hard as you do
 

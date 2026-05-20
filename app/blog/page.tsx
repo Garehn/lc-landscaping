@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import Link from 'next/link';
 import type { Metadata } from 'next';
 import { blogPosts } from '@/lib/blog';
@@ -24,28 +25,47 @@ export default function BlogPage() {
       <div className="rule container-x" />
 
       <section className="container-x py-20 lg:py-28">
-        <div className="grid gap-12 md:gap-16">
+        <div className="grid gap-16">
           {blogPosts.map((post, i) => (
             <FadeIn key={post.slug} delay={i * 0.08}>
               <Link href={`/blog/${post.slug}`} className="group block">
-                <article className="grid md:grid-cols-12 gap-6 md:gap-12 md:items-start py-10 border-b border-mist/60">
-                  <div className="md:col-span-3">
-                    <time className="text-sm text-charcoal/60 font-medium">{formatDate(post.date)}</time>
-                    <div className="text-xs text-charcoal/50 mt-1">{post.readTime}</div>
+                <article className="grid md:grid-cols-12 gap-8 md:gap-12 items-start">
+                  {/* Thumbnail */}
+                  <div className={`md:col-span-5 ${i % 2 === 1 ? 'md:order-2' : ''}`}>
+                    <div className="relative aspect-[4/3] overflow-hidden rounded-sm bg-dune">
+                      <Image
+                        src={post.heroImage.src}
+                        alt={post.heroImage.alt}
+                        fill
+                        sizes="(min-width: 768px) 40vw, 100vw"
+                        className="object-cover transition-transform duration-700 group-hover:scale-[1.04]"
+                      />
+                    </div>
                   </div>
-                  <div className="md:col-span-9">
-                    <h2 className="font-serif text-2xl md:text-3xl tracking-tighter2 group-hover:text-copper transition-colors duration-300 text-balance">
+
+                  {/* Content */}
+                  <div className="md:col-span-7 py-4">
+                    <div className="flex items-center gap-4 mb-4">
+                      <time className="text-sm text-charcoal/60 font-medium">{formatDate(post.date)}</time>
+                      <span className="w-1 h-1 rounded-full bg-charcoal/30" />
+                      <span className="text-xs text-charcoal/50">{post.readTime}</span>
+                    </div>
+                    <h2 className="font-serif text-2xl md:text-3xl lg:text-4xl tracking-tighter2 group-hover:text-copper transition-colors duration-300 text-balance leading-[1.12]">
                       {post.title}
                     </h2>
-                    <p className="mt-4 text-charcoal/70 text-lg leading-relaxed max-w-2xl text-pretty">
+                    <p className="mt-5 text-charcoal/70 text-lg leading-relaxed max-w-xl text-pretty">
                       {post.description}
                     </p>
-                    <span className="mt-6 inline-block text-[11px] uppercase tracking-[0.25em] text-charcoal/60 group-hover:text-copper transition-colors duration-300">
-                      Read article →
+                    <span className="mt-6 inline-flex items-center gap-2 text-[11px] uppercase tracking-[0.25em] text-charcoal/60 group-hover:text-copper transition-colors duration-300">
+                      Read article
+                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="transition-transform duration-500 group-hover:translate-x-1">
+                        <path d="M5 12h14M12 5l7 7-7 7" />
+                      </svg>
                     </span>
                   </div>
                 </article>
               </Link>
+              {i < blogPosts.length - 1 && <div className="rule mt-16" />}
             </FadeIn>
           ))}
         </div>
