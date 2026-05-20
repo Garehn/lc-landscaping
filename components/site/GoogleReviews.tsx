@@ -20,7 +20,7 @@ export function GoogleReviews() {
   const scrollRef = useRef<HTMLDivElement>(null);
 
   return (
-    <section className="py-28 lg:py-36 overflow-hidden">
+    <section className="pt-28 pb-12 lg:pt-36 lg:pb-14 overflow-hidden">
       <div className="container-x">
         <motion.div
           initial={{ opacity: 0, y: 24 }}

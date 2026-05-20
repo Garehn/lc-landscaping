@@ -81,7 +81,7 @@ const cardVariants = {
 
 export function SixServices() {
   return (
-    <section className="container-x pt-28 pb-24 lg:pt-36 lg:pb-32">
+    <section className="container-x pt-14 pb-24 lg:pt-16 lg:pb-32">
       <motion.div
         initial={{ opacity: 0, y: 24 }}
         whileInView={{ opacity: 1, y: 0 }}

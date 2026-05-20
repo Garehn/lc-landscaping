@@ -55,7 +55,7 @@
     font-family: var(--font-playfair), Georgia, serif;
     font-weight: 600;
     font-size: clamp(2.75rem, 7vw, 6rem);
-    line-height: 1.02;
+    line-height: 1.12;
     letter-spacing: -0.03em;
   }
   .display-italic {
