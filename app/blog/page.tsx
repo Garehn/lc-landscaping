@@ -16,7 +16,7 @@ export default function BlogPage() {
             Garden tips for <span className="display-italic">Canberra.</span>
           </h1>
           <p className="mt-10 body-lg max-w-2xl text-pretty">
-            Practical advice on lawn care, planting and garden maintenance — written for Canberra conditions.
+            Practical advice on lawn care, planting and garden maintenance, written for Canberra conditions.
           </p>
         </FadeIn>
       </section>

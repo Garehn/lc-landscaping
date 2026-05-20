@@ -32,7 +32,7 @@ export default function HomePage() {
             </HeroReveal>
             <HeroReveal delay={0.08}>
               <h1 className="display">
-                Lawns, hedges, gardens — <span className="display-italic">sorted.</span>
+                Creating a home you&rsquo;re <span className="display-italic">proud of.</span>
               </h1>
             </HeroReveal>
             <HeroReveal delay={0.2}>
@@ -110,7 +110,7 @@ export default function HomePage() {
             <div className="mt-14 flex items-center gap-4">
               <div className="w-8 h-px bg-ivory/30" />
               <div className="text-[11px] uppercase tracking-[0.25em] text-ivory/60">
-                {home.testimonial.author} — {home.testimonial.project}
+                {home.testimonial.author} · {home.testimonial.project}
               </div>
             </div>
           </FadeIn>

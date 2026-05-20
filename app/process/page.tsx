@@ -46,7 +46,7 @@ export default function ProcessPage() {
         </section>
       ))}
 
-      <Cta title="Ready to get started?" body="The first step is a message. Tell us what you need and we will come take a look — free of charge." />
+      <Cta title="Ready to get started?" body="The first step is a message. Tell us what you need and we will come take a look, free of charge." />
     </>
   );
 }

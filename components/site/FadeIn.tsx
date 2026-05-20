@@ -10,7 +10,7 @@ const variants: Variants = {
     y: 0,
     transition: {
       duration: 0.9,
-      ease: [0.16, 1, 0.3, 1], // expo out — smoother, more intentional
+      ease: [0.16, 1, 0.3, 1], // expo out - smoother, more intentional
     },
   },
 };

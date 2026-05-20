@@ -30,7 +30,7 @@ export function QuoteForm() {
         const msg =
           json?.errors?.[0]?.message ||
           (res.status === 429
-            ? 'Too many submissions — please try again in a few minutes.'
+            ? 'Too many submissions. Please try again in a few minutes.'
             : 'Something went wrong. Please try again or email us directly.');
         setServerError(msg);
         setStatus('error');
@@ -58,7 +58,7 @@ export function QuoteForm() {
         >
           <div className="eyebrow mb-4">Received</div>
           <p className="font-serif italic text-3xl md:text-4xl leading-tight tracking-tighter2 text-balance">
-            Thanks, {submittedName} — we&rsquo;ll be in touch within 24 hours.
+            Thanks, {submittedName}. We&rsquo;ll be in touch within 24 hours.
           </p>
           <p className="mt-6 text-sm text-charcoal/70 max-w-md">
             We read every enquiry ourselves. If we are not the right fit, we will tell you upfront and recommend someone good.

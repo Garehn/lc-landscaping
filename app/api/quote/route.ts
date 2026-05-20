@@ -45,7 +45,7 @@ export async function POST(req: NextRequest) {
     return NextResponse.json({ ok: false, errors: parsed.error.issues }, { status: 400 });
   }
 
-  // Honeypot — silently accept
+  // Honeypot - silently accept
   if (parsed.data.honeypot && parsed.data.honeypot.length > 0) {
     return NextResponse.json({ ok: true }, { status: 200 });
   }

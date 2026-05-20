@@ -36,7 +36,7 @@
 
   a { @apply transition-colors duration-300; }
 
-  /* Reduced motion — keep opacity, strip transforms */
+  /* Reduced motion - keep opacity, strip transforms */
   @media (prefers-reduced-motion: reduce) {
     *, *::before, *::after {
       animation-duration: 0.01ms !important;
@@ -132,7 +132,7 @@
     @apply h-px w-full bg-mist;
   }
 
-  /* Stagger animation — children fade+slide in with delay */
+  /* Stagger animation - children fade+slide in with delay */
   .stagger-children > * {
     opacity: 0;
     transform: translateY(8px);

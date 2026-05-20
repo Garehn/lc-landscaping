@@ -47,7 +47,7 @@ const ICON_PATHS: Record<CoreServiceIcon, React.ReactNode> = {
       <path d="M12 15C12 15 8 11 4 9C6 13 10 17 12 15Z" />
     </>
   ),
-  // Pruning shears — maintenance
+  // Pruning shears - maintenance
   maintain: (
     <>
       <circle cx="8" cy="18" r="3" />
@@ -96,7 +96,7 @@ export function SixServices() {
           </h2>
         </div>
         <p className="max-w-md text-charcoal/70 leading-relaxed">
-          From a one-off cleanup to fortnightly visits. Pick one, pick all six — same crew, same standard, every time.
+          From a one-off cleanup to fortnightly visits. Pick one, pick all six. Same crew, same standard, every time.
         </p>
       </motion.div>
 

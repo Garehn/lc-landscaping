@@ -8,8 +8,8 @@ export function Footer() {
         <div className="grid gap-16 md:grid-cols-12">
           <div className="md:col-span-7">
             <div className="font-serif text-4xl md:text-5xl lg:text-6xl tracking-tighter2 text-balance leading-[1.05]">
-              Lawns, hedges, <br className="hidden md:inline" />
-              gardens — <span className="italic">sorted.</span>
+              Creating a home you&rsquo;re <br className="hidden md:inline" />
+              <span className="italic">proud of.</span>
             </div>
             <Link
               href="/contact"

@@ -22,7 +22,7 @@ export default function ContactPage() {
           <div className="mt-14 space-y-10">
             <ContactBlock label="Email" value={studio.email} />
             <ContactBlock label="Service area" value={studio.area} />
-            <ContactBlock label="Hours" value="Mon–Sat · 7am–5pm" />
+            <ContactBlock label="Hours" value="Mon to Sat · 7am to 5pm" />
           </div>
         </FadeIn>
 

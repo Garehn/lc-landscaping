@@ -20,7 +20,7 @@ const playfair = Playfair_Display({
 
 export const metadata: Metadata = {
   title: {
-    default: 'LC Landscaping & Services — Canberra',
+    default: 'LC Landscaping & Services | Canberra',
     template: '%s · LC Landscaping & Services',
   },
   description:
@@ -28,7 +28,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'LC Landscaping & Services',
     description:
-      'Canberra landscaping. Lawns, hedges, gardens — sorted.',
+      'Canberra landscaping. Creating a home you\'re proud of.',
     type: 'website',
   },
 };

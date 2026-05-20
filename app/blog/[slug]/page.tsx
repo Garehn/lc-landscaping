@@ -92,7 +92,7 @@ export default async function BlogPostPage({ params }: Props) {
               </div>
             </div>
             <p className="text-charcoal/70 leading-relaxed">
-              We are a Canberra landscaping crew specialising in lawn mowing, hedge trimming, garden cleanups and makeovers. We write about what we know — practical garden advice for Canberra conditions.
+              We are a Canberra landscaping crew specialising in lawn mowing, hedge trimming, garden cleanups and makeovers. We write about what we know: practical garden advice for Canberra conditions.
             </p>
           </div>
         </FadeIn>

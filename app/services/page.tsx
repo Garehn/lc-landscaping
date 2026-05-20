@@ -18,7 +18,7 @@ export default function ServicesPage() {
             Mow, trim, plant, <span className="display-italic">maintain.</span>
           </h1>
           <p className="mt-10 body-lg max-w-2xl text-pretty">
-            Full-service garden care and landscaping across Canberra. From a one-off cleanup to fortnightly maintenance — one crew, consistent quality.
+            Full-service garden care and landscaping across Canberra. From a one-off cleanup to fortnightly maintenance. One crew, consistent quality.
           </p>
         </FadeIn>
       </section>

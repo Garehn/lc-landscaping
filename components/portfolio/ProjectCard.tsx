@@ -30,7 +30,7 @@ export function ProjectCard({ title, location, year, image, size = 'lg' }: Props
           sizes="(min-width: 1024px) 600px, 100vw"
           className="object-cover transition-transform duration-[1500ms] ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:scale-[1.04]"
         />
-        {/* Hover gradient overlay — dark from bottom */}
+        {/* Hover gradient overlay - dark from bottom */}
         <div className="absolute inset-0 bg-gradient-to-t from-charcoal/20 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
       </div>
       <div className="mt-6 flex items-baseline justify-between gap-4">

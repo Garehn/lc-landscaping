@@ -3,7 +3,7 @@
 import { motion, useScroll, useTransform } from 'framer-motion';
 
 /**
- * Minimal scroll indicator — a small line that fades out as user scrolls.
+ * Minimal scroll indicator - a small line that fades out as user scrolls.
  * Positioned absolute at the bottom of its parent.
  */
 export function ScrollIndicator() {

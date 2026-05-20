@@ -7,7 +7,7 @@ export const images = {
 
   service_design: { src: local('service_design'), alt: 'A neatly mowed lawn with sharp edges and a trimmed hedge border in Canberra' },
   service_hardscape: { src: local('service_hardscape'), alt: 'Precision hedge trimming along a Canberra property fence line' },
-  service_planting: { src: local('service_planting'), alt: 'An overgrown Canberra garden before cleanup — weeds, long grass and debris' },
+  service_planting: { src: local('service_planting'), alt: 'An overgrown Canberra garden before cleanup with weeds, long grass and debris' },
   service_irrigation: { src: local('service_irrigation'), alt: 'New garden beds with mulch and feature planting in a Canberra backyard' },
   service_outdoor: { src: local('service_outdoor'), alt: 'Native planting and mulch in a frost-tolerant Canberra garden bed' },
   service_maintain: { src: local('service_maintain'), alt: 'A well-maintained Canberra garden with clipped hedges and edged lawn' },
@@ -25,15 +25,15 @@ export const images = {
   portfolio_4: { src: local('portfolio_4'), alt: 'A Tuggeranong backyard transformation with new turf and garden beds' },
 
   ba1_before: { src: local('ba1_before'), alt: 'An overgrown Canberra backyard before garden makeover' },
-  ba1_after: { src: local('ba1_after'), alt: 'The same backyard after — new garden beds, mulch and tidy lawn' },
+  ba1_after: { src: local('ba1_after'), alt: 'The same backyard after: new garden beds, mulch and tidy lawn' },
   ba2_before: { src: local('ba2_before'), alt: 'Overgrown hedges and long grass before maintenance' },
-  ba2_after: { src: local('ba2_after'), alt: 'The same property after — trimmed hedges and mowed lawn' },
+  ba2_after: { src: local('ba2_after'), alt: 'The same property after: trimmed hedges and mowed lawn' },
   ba3_before: { src: local('ba3_before'), alt: 'A tired front garden with weeds and bare soil' },
-  ba3_after: { src: local('ba3_after'), alt: 'The same front garden after — fresh mulch and new planting' },
+  ba3_after: { src: local('ba3_after'), alt: 'The same front garden after: fresh mulch and new planting' },
 
   slider_1: { src: local('slider_1'), alt: 'A freshly built garden bed with native plants and bark mulch' },
   slider_2: { src: local('slider_2'), alt: 'A neatly trimmed photinia hedge along a Canberra fence line' },
-  slider_3: { src: local('slider_3'), alt: 'Native planting in a Canberra garden — grevillea and lomandra' },
+  slider_3: { src: local('slider_3'), alt: 'Native planting in a Canberra garden with grevillea and lomandra' },
   slider_4: { src: local('slider_4'), alt: 'A tidy courtyard garden with edged lawn and potted plants' },
   slider_5: { src: local('slider_5'), alt: 'Freshly mowed and edged lawn in a Canberra suburb' },
   slider_6: { src: local('slider_6'), alt: 'Mulched garden beds and pruned shrubs in a Canberra backyard' },
